@@ -1,3 +1,17 @@
+
+var timeH = document.getElementById("time");
+var timeSecond = 60;
+
+timeH.innerHTML = timeSecond;
+
+var countDown = setInterval (()=>{
+    timeSecond--;
+    timeH.innerHTML = timeSecond;
+    if(timeSecond <= 0 || timeSecond < 1){
+        clearInterval(countDown);
+    }
+},1000)
+
 var question = document.getElementById("question");
 var choices = Array.from(document.getElementsByClassName("choice-text"));
 console.log(choices);
@@ -5,7 +19,7 @@ console.log(choices);
 var scoreText = document.getElementsByClassName("scores");
 
 
-let secondsLeft = 60;
+
 var currentQuestion = {};
 var acceptingAnswers = false;
 var score = 0;
@@ -58,25 +72,18 @@ var questions = [
 var correctBonus = 10;
 var maxQuestions = 5;
 
+
 startGame = () => {
+  
     questionCounter = 0;
     score = 0;
     availableQuestions = [...questions];
     nextQuestion();
+
+   
 };
 
-function startTimer() {
-    timerEl.textContent = secondsLeft;
-    let timerInterval = setInterval(
-        () => {
-            secondsLeft--;
-            timerEl.textContent = secondsLeft;
-            if (secondsLeft <= 0) {
-                clearInterval(timerInterval);
-                endGame();
-            }
-        }, 1000);
-};
+
 
 nextQuestion = () => {
     if (availableQuestions.length === 0 || questionCounter > maxQuestions) {
@@ -114,17 +121,21 @@ choices.forEach(choice => {
             if(classToApply === 'correct') {
                 incrementScore(correctBonus);
             }
+            if(classToApply === 'incorrect') {
+                timeSecond -= 10;
+            }
         console.log(classToApply);
 
         selectedChoice.parentElement.classList.add(classToApply);
 
-            setTimeout(() => {
-                selectedChoice.parentElement.classList.remove(classToApply);
-                nextQuestion();
-            }, 1000)    
-    
-    });
+        setTimeout(() => {
+            selectedChoice.parentElement.classList.remove(classToApply);
+            nextQuestion();
+        }, 1000)    
+
 });
+});
+
 
 incrementScore = num => {
     score +=num;
