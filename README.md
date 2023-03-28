@@ -1,19 +1,11 @@
 # Module 6 Challenge Web APIs: Code Quiz
+My motivation for this project is to create a quiz for bootcamp students to test their knowledge and guage the progress along the course.
 
-## Your Task
+I would like a system that has 5 questions and a timer of 60 seconds. Once this timer reaches 0 the quiz will end. If the student selects the wrong answer then 10 seconds will be deducted from the timer.
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+Having this system will display the top 5 highest scores and the students initials which will help guage their progress compared to other stdents on the bootcamp.
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
-
-
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
+During this project I was able to practice event listeners, setting API's, timer functions  and JSON functions. I also learned about the arrow function to write shorter function syntax.
 
 ## Acceptance Criteria
 
@@ -30,59 +22,12 @@ Create a code quiz that contains the following requirements:
 * The quiz should end when all questions are answered or the timer reaches 0.
 
   * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
 
-The following animation demonstrates the application functionality:
+For this project I watched a video where a developer made a quiz which I learnt a lot from. I was able to watch the video and adapt elements to suit the design I wanted for my own quiz. The quiz created during this video was quite different to my own and did not include a timer however it was a great support when storing the highest scores in the local storage as I struggled with this part of the project. https://www.jamesqquick.com/courses/build-a-quiz-app-with-html-css-and-javascript/
 
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+![Quiz](assets/Images/Mar-28-2023%2019-47-51.gif)
 
 
-## Review
+https://sophieemsi.github.io/Code-Quiz---Module-6-Challenge/
 
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+https://github.com/SophieEmsi/Code-Quiz---Module-6-Challenge
