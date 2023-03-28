@@ -4,33 +4,37 @@ var finalScore = document.getElementById("final-score");
 var mostRecentScore = localStorage.getItem("mostRecentScore");
 
 
+var highScores = JSON.parse(localStorage.getItem("highScores")) || [];
+
+var MAX_HIGH_SCORES = 5;
+console.log(highScores);
 
 finalScore.innerText = mostRecentScore;
 
-var highScores = JSON.parse(localStorage.getItem("highscores")) || [];
 
-initials.addEventListener("keyup", () => {
+
+initials.addEventListener('keyup', () => {
+    console.log(initials.value);
     submit.disabled = !initials.value;
-})
+});
 
 saveHighScore = e => {
     console.log("Clicked Submit")
     e.preventDefault();
 
     var score = {
-        score: Math.floor(Math.random() * 100), 
-        name: initials.value
+        score: mostRecentScore,
+        name: initials.value,
     };
     highScores.push(score);
-
-    highScores.sort( (a,b) => b.score - a.score)
-
+    highScores.sort( (a,b) => b.score - a.score);
     highScores.splice(5);
+    
 
-    localStorage.setItem("highscores", JSON.stringify(highScores));
-    window.location.assign("/");
-
+    localStorage.setItem('highScores', JSON.stringify(highScores));
     console.log(highScores);
-}
+};
+
+
 
 
