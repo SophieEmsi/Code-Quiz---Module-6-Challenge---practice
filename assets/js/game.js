@@ -5,7 +5,7 @@ console.log(choices);
 var scoreText = document.getElementsByClassName("scores");
 
 
-
+let secondsLeft = 60;
 var currentQuestion = {};
 var acceptingAnswers = false;
 var score = 0;
@@ -63,6 +63,19 @@ startGame = () => {
     score = 0;
     availableQuestions = [...questions];
     nextQuestion();
+};
+
+function startTimer() {
+    timerEl.textContent = secondsLeft;
+    let timerInterval = setInterval(
+        () => {
+            secondsLeft--;
+            timerEl.textContent = secondsLeft;
+            if (secondsLeft <= 0) {
+                clearInterval(timerInterval);
+                endGame();
+            }
+        }, 1000);
 };
 
 nextQuestion = () => {
